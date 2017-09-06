@@ -67,6 +67,8 @@ base class options, as well as any of these PCM formatting options:
   * `signed` - Boolean specifying if the samples are signed or unsigned. Defaults to `true` when bit depth is 8-bit, `false` otherwise.
   * `float` - Boolean specifying if the samples are floating-point values. Defaults to `false`.
   * `samplesPerFrame` - The number of samples to send to the audio backend at a time. You likely don't need to mess with this value. Defaults to `1024`.
+  * `device` - The name of the playback device. E.g. `'hw:0,0'` (first device of first sound card) `'hw:1,0'` (first device of second sound card.  Defaults to `undefined` (which means the backend's default device will be chosen).  
+    *only tested with `ALSA` as the backend*
 
 #### "open" event
 
